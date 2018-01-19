@@ -7,7 +7,8 @@ namespace Assets.Scripts.InputScripts
     {
         MovePlayerRight,
         MovePlayerLeft,
-        PlayerJump
+        PlayerJump,
+        PlayerAttack
     }
 
     public class ControlMapping
@@ -21,7 +22,8 @@ namespace Assets.Scripts.InputScripts
             {
                 { Control.MovePlayerLeft, "left" },
                 { Control.MovePlayerRight, "right" },
-                { Control.PlayerJump, "up" }
+                { Control.PlayerJump, "up" },
+                //{ Control.PlayerAttack, "rightMouse" }
             };
         }
 
@@ -33,7 +35,7 @@ namespace Assets.Scripts.InputScripts
         public bool GetControlPressed(Control control)
         {
             string mappedKey = _mappedControls[control];
-
+            
             if (Input.GetKey(mappedKey))
                 return true;
 
