@@ -35,10 +35,7 @@ namespace Assets.Scripts.InputScripts
             string mappedKey = _mappedControls[control];
 
             if (Input.GetKey(mappedKey))
-            {
-                Debug.Log("Key Down! " + mappedKey);
                 return true;
-            }
 
             return false;
         }
